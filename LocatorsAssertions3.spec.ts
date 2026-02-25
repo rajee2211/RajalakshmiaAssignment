@@ -30,5 +30,6 @@ await page.getByRole('button',{ name : 'New'}).click()
 await page.waitForTimeout(2000)
 await page.locator("[name='Name']").click()
 await page.locator("//button[text()='Save']").click()
- 
+ await expect(page.locator("//span[@class='toastMessage slds-text-heading--small forceActionsText']")).toContainText("Accou")
+
 })
